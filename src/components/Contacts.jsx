@@ -1,9 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import ThemeContext from "../Context/ThemeContext";
 
 const Contacts = () => {
   const form = useRef();
-  const [done,setdone] = useState(false)
+  const [done, setdone] = useState(false);
+  const { darkMode } = useContext(ThemeContext);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,7 +20,7 @@ const Contacts = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setdone(true)
+          setdone(true);
         },
         (error) => {
           console.log(error.text);
@@ -27,12 +29,25 @@ const Contacts = () => {
   };
 
   return (
-    <div className="flex p-[0,3rem,0,3rem] h-[90vh] mt-[10rem] pt-[3rem]" id="Contacts">
+    <div
+      className="flex p-[0,3rem,0,3rem] h-[90vh] mt-[10rem] pt-[3rem]"
+      id="Contacts"
+    >
       {/* Left View */}
       <div>
         <div className="flex flex-col">
-          <span className="text-5xl font-bold text-black">Get In Touch</span>
-          <span className="text-5xl text-orange-400 font-bold mt-1">
+          <span
+            className={`${
+              darkMode ? "text-gray-300" : "text-gray-700"
+            } font-bold text-5xl mb-2`}
+          >
+            Get In Touch
+          </span>
+          <span
+            className={`${
+              darkMode ? "text-teal-300 " : "text-orange-400"
+            } font-bold text-5xl mb-2`}
+          >
             Contact Me
           </span>
           <div
@@ -44,29 +59,40 @@ const Contacts = () => {
 
       {/* Right View */}
       <div className="flex justify-center flex-1 relative">
-        <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-[2rem] items-center">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="flex flex-col gap-[2rem] items-center"
+        >
           <input
             type="text"
             name="user_name"
             placeholder="Name"
-            className="inputCSS"
+            className={`${darkMode ? "dark_mode_CSS" : "light_mode_CSS"}`}
           />
           <input
             type="text"
             name="user_email"
             placeholder="Email"
-            className="inputCSS"
+            className={`${darkMode ? "dark_mode_CSS" : "light_mode_CSS"}`}
           />
           <textarea
             type="text"
             name="message"
             placeholder="Message"
-            className="inputCSS !h-[8rem]"
+            className={`${
+              darkMode ? "dark_mode_CSS" : "light_mode_CSS"
+            } !h-[8rem]`}
           />
           <input
             type="submit"
             value="Send"
-            className="h-10 w-44 rounded-full p-[11px] text-[16px] hover:from-white bg-gradient-to-r from-orange-300 to-orange-500 shadow-lg shadow-orange-300 hover:border-orange-500 hover:border-2 "
+            className={`rounded-full p-[11px] text-[16px] w-[10rem] mt-8
+          ${
+            darkMode
+              ? "bg-gradient-to-r from-teal-200 to-teal-500 hover:from-white hover:to-teal-200 border-teal-300 border-[3px] shadow-md shadow-teal-300"
+              : "hover:from-white bg-gradient-to-r from-orange-300 to-orange-500 shadow-lg shadow-orange-300 hover:border-orange-500 hover:border-2"
+          }`}
           />
           <span className="">{done && "Thanks for Contacting Me"}</span>
           <div

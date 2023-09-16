@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.inputCSS{
+.light_mode_CSS{
     width: 20rem;
     height: 2rem;
     padding: 0.3em;
@@ -10,4 +10,15 @@
     border: 4px solid var(--orange);
     border-radius: 8px;
     font-size: 16px;  
+}
+
+.dark_mode_CSS{
+    width: 20rem;
+    height: 2rem;
+    padding: 0.3em;
+    outline: none;
+    border: 4px solid;
+    border-color: #03dac6;
+    border-radius: 8px;
+    font-size: 16px; 
 }

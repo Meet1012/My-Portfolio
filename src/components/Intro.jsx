@@ -1,7 +1,4 @@
 import React, { useContext } from "react";
-import Github from "../img/github.png";
-import Linkedin from "../img/linkedin.png";
-import Instagram from "../img/instagram.png";
 import MyPhoto from "../img/boy.png";
 import ThumbsUp from "../img/thumbup.png";
 import Vector1 from "../img/Vector1.png";
@@ -11,6 +8,11 @@ import GlassesEmoji from "../img/glassesimoji.png";
 import Floatingdiv from "./FloatingDiv";
 import { motion } from "framer-motion";
 import ThemeContext from "../Context/ThemeContext";
+import { Link } from "react-scroll";
+import { ImGithub } from "react-icons/im";
+import { BsLinkedin } from "react-icons/bs";
+import { SiLeetcode } from "react-icons/si";
+import { LiaHackerrank } from "react-icons/lia";
 
 const Intro = () => {
   const transition = { duration: 2, type: "spring" };
@@ -21,9 +23,19 @@ const Intro = () => {
       {/* Left */}
       <div className="relative flex-1 flex-col gap-[2rem]">
         <div className="flex flex-col">
-          <span className="text-black font-bold text-5xl mb-2">Hy ! I AM</span>
-          <span className="text-orange-400 font-bold text-5xl mb-2">
-            Meet Patel
+          <span
+            className={`${
+              darkMode ? "text-gray-300" : "text-gray-700"
+            } font-bold text-5xl mb-2`}
+          >
+            Hy ! I AM
+          </span>
+          <span
+            className={`${
+              darkMode ? "text-teal-300 " : "text-orange-400"
+            } font-bold text-5xl mb-2`}
+          >
+            Web Developer
           </span>
           <span className="text-gray-500 text-base font-thin">
             Frontend Developer with high level of experience in web designing
@@ -31,13 +43,27 @@ const Intro = () => {
             and development, producting the Quality work
           </span>
         </div>
-        <button className="mt-1 h-[2rem] w-[6rem] rounded-full p-[10px] text-[16px] hover:from-white bg-gradient-to-r from-orange-300 to-orange-500 shadow-lg shadow-orange-300 hover:border-orange-500 hover:border-2">
-          Hire Me!
-        </button>
-        <div className="mt-[3rem] flex flex-row gap-20 h-[4rem] w-[6rem] cursor-pointer scale-50">
-          <img src={Github} alt="Github" />
-          <img src={Linkedin} alt="LinkedIn" />
-          <img src={Instagram} alt="Instagram" />
+        <Link spy={true} smooth={true} to="Contacts">
+          <button
+            className={`rounded-full p-[11px] text-[16px] w-[7rem] mt-8
+          ${
+            darkMode
+              ? "bg-gradient-to-r from-teal-200 to-teal-500 hover:from-white hover:to-teal-200 border-teal-300 border-[3px] shadow-lg shadow-teal-300"
+              : "hover:from-white bg-gradient-to-r from-orange-300 to-orange-500 shadow-lg shadow-orange-300 hover:border-orange-500 hover:border-2"
+          }`}
+          >
+            Hire Me!
+          </button>
+        </Link>
+        <div
+          className={`${
+            darkMode ? "text-teal-300" : "text-orange-400"
+          } mt-[3rem] flex flex-row gap-20 cursor-pointer scale-50 ml-[-12rem] `}
+        >
+          <ImGithub className="h-[5rem] w-[7rem]" />
+          <BsLinkedin className="h-[5rem] w-[7rem]" />
+          <SiLeetcode className="h-[5rem] w-[7rem]" />
+          <LiaHackerrank className="h-[5rem] w-[7rem]" />
         </div>
       </div>
       {/* Right */}
