@@ -27,7 +27,7 @@ const Contacts = () => {
   };
 
   return (
-    <div className="flex p-[0,3rem,0,3rem] h-[90vh] mt-[10rem] pt-[3rem]">
+    <div className="flex p-[0,3rem,0,3rem] h-[90vh] mt-[10rem] pt-[3rem]" id="Contacts">
       {/* Left View */}
       <div>
         <div className="flex flex-col">

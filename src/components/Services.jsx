@@ -4,10 +4,13 @@ import GlassesEmoji from "../img/glasses.png";
 import HumbleEmoji from "../img/humble.png";
 import Card from "./Card";
 import Resume from "./Resume.txt";
+import { motion } from "framer-motion";
 
 const Services = () => {
+  const transition = { duration: 1, type: "spring" };
+
   return (
-    <div className="p-[0,3rem,0,3rem] flex h-[32rem] mt-[9rem] mb-[13rem]">
+    <div className="p-[0,3rem,0,3rem] flex h-[32rem] pt-4 mt-[9rem] mb-[13rem]" id="Services">
       {/* Left Side */}
       <div className="flex flex-col relative ">
         <span className="text-4xl font-bold text-black">My Awesome</span>
@@ -39,27 +42,39 @@ const Services = () => {
 
       {/* Right Side */}
       <div className="relative ml-[12rem]">
-        <div className="absolute ml-[6rem]">
+        <motion.div
+          initial={{left:"8rem"}}
+          whileInView={{left:"0%"}}
+          transition={transition}
+        className="absolute ml-[6rem]">
           <Card
             image={HeartEmoji}
             heading="Design"
             description="Figma, Photoshop, Adobe , Sketch, Adobe xd"
           />
-        </div>
-        <div className="absolute mt-[16rem] ml-[-14rem]">
+        </motion.div>
+        <motion.div
+        initial={{left:"-8rem"}}
+        whileInView={{left:"0%"}}
+        transition={transition}
+        className="absolute mt-[16rem] ml-[-14rem]">
           <Card
             image={GlassesEmoji}
             heading="Developer"
             description="HTML, CSS, Javascript, React, Express, MongoDB"
           />
-        </div>
-        <div className="absolute ml-[4rem] mt-[20rem]">
+        </motion.div>
+        <motion.div
+        initial={{left:"8rem"}}
+        whileInView={{left:"0rem"}}
+        transition={transition}
+        className="absolute ml-[4rem] mt-[20rem]">
           <Card
             image={HumbleEmoji}
             heading="UI/UX"
             description="Adobe XD, Sketch, Figma, InVision, Balsamiq, and Axure RP"
           />
-        </div>
+        </motion.div>
       </div>
       {/* Blur Section */}
       <div

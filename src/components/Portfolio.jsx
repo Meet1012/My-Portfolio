@@ -7,7 +7,7 @@ import Shoe_Shop from "../img/Shoe_Store.png";
 
 const Portfolio = () => {
   return (
-    <div className="flex items-center justify-center flex-col h-[90vh]">
+    <div className="flex items-center justify-center flex-col h-[90vh] pt-4" id="Portfolio">
       <div
         className="w-[22rem] h-[12rem] absolute bg-[#edd0ff] rounded-lg blur-2xl 
         z-[-1] mt-[30rem] ml-[-50rem]"

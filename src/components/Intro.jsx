@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import Github from "../img/github.png";
 import Linkedin from "../img/linkedin.png";
 import Instagram from "../img/instagram.png";
 import MyPhoto from "../img/boy.png";
-import ThmubsUp from "../img/thumbup.png";
+import ThumbsUp from "../img/thumbup.png";
 import Vector1 from "../img/Vector1.png";
 import Vector2 from "../img/Vector2.png";
 import Crown from "../img/crown.png";
 import GlassesEmoji from "../img/glassesimoji.png";
 import Floatingdiv from "./FloatingDiv";
+import { motion } from "framer-motion";
+import ThemeContext from "../Context/ThemeContext";
 
 const Intro = () => {
+  const transition = { duration: 2, type: "spring" };
+  const { darkMode } = useContext(ThemeContext);
+
   return (
     <div className="flex h-[77vh] mt-[6rem]">
       {/* Left */}
@@ -53,27 +58,31 @@ const Intro = () => {
           className="absolute scale-[1.4] left-[28%]"
         />
         <div>
-          <img
+          <motion.img
+            initial={{ left: "-25%" }}
+            whileInView={{ left: "0%" }}
+            transition={transition}
             src={GlassesEmoji}
             className="absolute scale-50 mt-[-10%] ml-[-24%] rounded-lg"
+            alt="Not Found"
           />
-        </div>
-        {/* Blur Effect 1*/}
-        <div
-          className="w-[22rem] h-[14rem] absolute bg-[#edd0ff] rounded-lg blur-2xl 
-        z-[-9] ml-[50%] mt-[-10%]"
-        ></div>
-        {/* Blur Effect 1 */}
-        <div className="ml-[68%]">
-          <Floatingdiv image={Crown} text1="Web" text2="Developer" />
-        </div>
-        <div className="mt-[55%]">
-          <Floatingdiv image={ThmubsUp} text1="Best" text2="Designer" />
+          {/* Blur Effect 1*/}
+          <div
+            className={`w-[22rem] h-[14rem] absolute rounded-lg blur-2xl 
+          z-[-1] ml-[50%] mt-[-10%] ${darkMode ? "bg-black" : "bg-[#edd0ff]"}`}
+          ></div>
+          {/* Blur Effect 1 */}
+          <div className="ml-[68%]">
+            <Floatingdiv image={Crown} text1="Web" text2="Developer" />
+          </div>
+          <div className="mt-[45%]">
+            <Floatingdiv image={ThumbsUp} text1="Best" text2="Designer" />
+          </div>
         </div>
         {/* Blur Effect 2 */}
         <div
-          className="w-[22rem] h-[14rem] absolute bg-[#c1f5ff] rounded-xl blur-2xl 
-          z-[-9] ml-[-10%] mt-[-30%]"
+          className={`w-[22rem] h-[14rem] absolute  rounded-xl blur-2xl 
+          z-[-1] ml-[-10%] mt-[-30%] ${darkMode ? "bg-black" : "bg-[#c1f5ff]"}`}
         ></div>
         {/* Blur Effect 2 */}
       </div>
