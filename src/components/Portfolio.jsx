@@ -41,7 +41,7 @@ const Portfolio = () => {
           showStatus={false}
           showThumbs={false}
           showArrows={false}
-          className="border-[10px] rounded-md border-gray-300"
+          className={`border-[10px] rounded-md ${darkMode ? "border-gray-800":"border-gray-300"} `}
         >
           <div>
             <img src={Portfolio_Img} alt="" />
