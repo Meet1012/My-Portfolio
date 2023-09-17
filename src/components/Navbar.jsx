@@ -71,12 +71,12 @@ const Navbar = () => {
         </div>
         <Link smooth={true} spy={true} to="Contacts">
           <button
-            className={`rounded-full p-[11px] text-[16px] 
-          ${
-            darkMode
-              ? "bg-gradient-to-r from-teal-200 to-teal-500 hover:from-white hover:to-teal-200 border-teal-300 border-[3px] shadow-lg shadow-teal-300"
-              : "hover:from-white bg-gradient-to-r from-orange-300 to-orange-500 shadow-lg shadow-orange-300 hover:border-orange-500 hover:border-2"
-          }`}
+            className={`rounded-full p-[11px] text-[16px] w-[7rem] 
+            ${
+              darkMode
+                ? "bg-gradient-to-r from-teal-200 to-teal-500 hover:from-white hover:to-teal-200 border-teal-300 border-[3px] shadow-lg shadow-teal-300"
+                : "hover:from-white bg-gradient-to-r from-orange-300 to-orange-500 shadow-lg shadow-orange-300 hover:border-orange-500 hover:border-2"
+            }`}
           >
             Contact Me !
           </button>
