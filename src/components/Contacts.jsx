@@ -4,6 +4,10 @@ import ThemeContext from "../Context/ThemeContext";
 
 const Contacts = () => {
   const form = useRef();
+  const emptyName = useRef("");
+  const emptyEmail = useRef("");
+  const emptyMessage = useRef("");
+  
   const [done, setdone] = useState(false);
   const { darkMode } = useContext(ThemeContext);
 
@@ -26,11 +30,14 @@ const Contacts = () => {
           console.log(error.text);
         }
       );
+    emptyName.current.value = "";
+    emptyEmail.current.value = "";
+    emptyMessage.current.value = "";
   };
 
   return (
     <div
-      className="flex p-[0,3rem,0,3rem] h-[90vh] mt-[15rem] pt-[3rem]"
+      className="flex p-[0,3rem,0,3rem] h-[90vh] mt-[15rem] pt-[3rem] ml-[5rem]"
       id="Contacts"
     >
       {/* Left View */}
@@ -68,18 +75,21 @@ const Contacts = () => {
             type="text"
             name="user_name"
             placeholder="Name"
+            ref={emptyName}
             className={`${darkMode ? "dark_mode_CSS" : "light_mode_CSS"}`}
           />
           <input
             type="text"
             name="user_email"
             placeholder="Email"
+            ref={emptyEmail}
             className={`${darkMode ? "dark_mode_CSS" : "light_mode_CSS"}`}
           />
           <textarea
             type="text"
             name="message"
             placeholder="Message"
+            ref={emptyMessage}
             className={`${
               darkMode ? "dark_mode_CSS" : "light_mode_CSS"
             } !h-[8rem]`}

@@ -68,10 +68,18 @@ const Intro = () => {
             darkMode ? "text-teal-300" : "text-orange-400"
           } mt-[3rem] flex flex-row gap-20 cursor-pointer scale-50 ml-[-12rem] `}
         >
-          <ImGithub className="h-[5rem] w-[7rem]" />
-          <BsLinkedin className="h-[5rem] w-[7rem]" />
-          <SiLeetcode className="h-[5rem] w-[7rem]" />
-          <LiaHackerrank className="h-[5rem] w-[7rem]" />
+          <a href="https://github.com/Meet1012">
+            <ImGithub className="h-[5rem] w-[7rem]" />
+          </a>
+          <a href="https://www.linkedin.com/in/meet-patel-a323b3248/">
+            <BsLinkedin className="h-[5rem] w-[7rem]" />
+          </a>
+          <a href="https://leetcode.com/Meet_10/">
+            <SiLeetcode className="h-[5rem] w-[7rem]" />
+          </a>
+          <a href="https://www.hackerrank.com/meet20003">
+            <LiaHackerrank className="h-[5rem] w-[7rem]" />
+          </a>
         </div>
       </div>
 

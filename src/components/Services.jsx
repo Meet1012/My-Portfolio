@@ -3,7 +3,7 @@ import HeartEmoji from "../img/heartemoji.png";
 import GlassesEmoji from "../img/glasses.png";
 import HumbleEmoji from "../img/humble.png";
 import Card from "./Card";
-import Resume from "./Resume.txt";
+import Resume from "./Resume.pdf";
 import { motion } from "framer-motion";
 import ThemeContext from "../Context/ThemeContext";
 
