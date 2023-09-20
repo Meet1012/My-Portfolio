@@ -6,6 +6,7 @@ import Portfolio from './components/Portfolio'
 import Contacts from './components/Contacts';
 import ThemeContext from '../src/Context/ThemeContext'
 import { useState } from 'react';
+import Skills from './components/Skills';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -17,6 +18,7 @@ function App() {
         <Intro />
         <Services />
         <Portfolio />
+        <Skills />
         <Contacts />
       </div>
     </ThemeContext.Provider>

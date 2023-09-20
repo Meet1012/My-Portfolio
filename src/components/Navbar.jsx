@@ -58,7 +58,7 @@ const Navbar = () => {
                 Portfolio
               </li>
             </Link>
-            <Link smooth={true} spy={true} to={Navbar}>
+            <Link smooth={true} spy={true} to="Skills">
               <li
                 className={`${
                   darkMode ? "hover:text-teal-300" : "hover:text-orange-300"

@@ -30,7 +30,7 @@ const Contacts = () => {
 
   return (
     <div
-      className="flex p-[0,3rem,0,3rem] h-[90vh] mt-[10rem] pt-[3rem]"
+      className="flex p-[0,3rem,0,3rem] h-[90vh] mt-[15rem] pt-[3rem]"
       id="Contacts"
     >
       {/* Left View */}

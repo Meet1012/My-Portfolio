@@ -77,22 +77,22 @@ const Intro = () => {
 
       {/* Right Side*/}
       <div className="flex-[1] relative z-[1] mr-[-5%]">
-        {/* <img
-          src={Vector1}
-          alt="Vector1"
-          className="absolute scale-[0.95] left-[-8%] top-[-9%]"
-        />
-        <img
-          src={Vector2}
-          alt="Vector2"
-          className="absolute top-[-2rem] scale-[0.93] left-[-0.1rem]"
-        />
-      */}
         <img
           src={My_Photo}
           alt="My_Photo"
-          className="absolute scale-[0.3] left-[-15%] mt-[-50%]"
+          className="absolute scale-[0.3] left-[-10%] mt-[-45%]"
         />
+
+        <div
+          className={`h-28 w-28 left-24 border-l-8 border-t-8 absolute ${
+            darkMode ? "border-teal-400 " : "border-orange-400"
+          }`}
+        ></div>
+        <div
+          className={`h-28 w-28 border-b-8 border-r-8 left-64 top-56 absolute ${
+            darkMode ? "border-teal-400 " : "border-orange-400"
+          }`}
+        ></div>
         <div>
           <motion.img
             initial={{ left: "-25%" }}
