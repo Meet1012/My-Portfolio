@@ -13,7 +13,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
-      <div className={`App ${darkMode ? "bg-black text-white" : ""}`}>
+      <div className={`App w-[700px] md:w-full ${darkMode ? "bg-black text-white" : ""}`}>
         <Navbar />
         <Intro />
         <Services />

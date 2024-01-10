@@ -26,7 +26,7 @@ const Intro = () => {
     loop: 10,
   });
   return (
-    <div className="flex h-[77vh] mt-[6rem]">
+    <div className="flex h-[77vh] mt-[6rem] flex-col lg:flex-row">
       {/* Left */}
       <div className="relative flex-1 flex-col gap-[2rem]">
         <div className="flex flex-col">
@@ -37,6 +37,16 @@ const Intro = () => {
           >
             Hi ! I AM
           </span>
+          <div className="block lg:hidden">
+            <div
+              className="w-[26rem] h-[20rem] absolute bg-[#edd0ff] rounded-lg blur-2xl 
+              z-[-1] -mt-24"
+            ></div>
+            <div
+              className="w-[26rem] h-[20rem] absolute bg-[#c1f5ff] rounded-lg blur-2xl 
+          z-[-1] mt-36 ml-[20%]"
+            ></div>
+          </div>
           <span
             className={`${
               darkMode ? "text-teal-300 " : "text-orange-400"
@@ -66,7 +76,7 @@ const Intro = () => {
         <div
           className={`${
             darkMode ? "text-teal-300" : "text-orange-400"
-          } mt-[3rem] flex flex-row gap-20 cursor-pointer scale-50 ml-[-12rem] `}
+          } mt-[3rem] flex flex-row gap-3 lg:gap-20 cursor-pointer ml-[-7rem] scale-50 lg:ml-[-12rem] `}
         >
           <a href="https://github.com/Meet1012">
             <ImGithub className="h-[5rem] w-[7rem]" />
@@ -84,7 +94,7 @@ const Intro = () => {
       </div>
 
       {/* Right Side*/}
-      <div className="flex-[1] relative z-[1] mr-[-5%]">
+      <div className="flex-[1] relative z-[1] mr-[-5%] hidden lg:block">
         <img
           src={My_Photo}
           alt="My_Photo"

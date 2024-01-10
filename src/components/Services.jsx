@@ -13,11 +13,11 @@ const Services = () => {
 
   return (
     <div
-      className="p-[0,3rem,0,3rem] flex h-[32rem] pt-4 mt-[9rem] mb-[13rem]"
+      className="p-[0,3rem,0,3rem] flex flex-col lg:flex-row h-[32rem] pt-4 mt-[9rem] mb-[13rem]"
       id="Services"
     >
       {/* Left Side */}
-      <div className="flex flex-col relative ">
+      <div className="flex flex-col lg:relative absolute">
         <span
           className={`${
             darkMode ? "text-gray-300" : "text-gray-700"
@@ -52,7 +52,7 @@ const Services = () => {
         {/* Blur Section */}
         <div
           className="w-[22rem] h-[14rem] absolute bg-[#c1f5ff] rounded-xl blur-2xl 
-          z-[-5] ml-64"
+          z-[-5] lg:ml-64 "
         ></div>
         <div
           className="w-[22rem] h-[14rem] absolute bg-[#c1f5ff] rounded-xl blur-2xl 
@@ -63,24 +63,24 @@ const Services = () => {
       {/* Left Side */}
 
       {/* Right Side */}
-      <div className="relative ml-[12rem]">
+      <div className="relative left-0 lg:ml-[12rem] mt-10 lg:mt-0 lg:flex">
         <motion.div
           initial={{ left: "8rem" }}
-          whileInView={{ left: "0%" }}
+          whileInView={{ left: "-5%" }}
           transition={transition}
-          className="absolute ml-[6rem]"
+          className="lg:mt-0 mt-[18rem] absolute ml-[6rem]"
         >
-          <Card
+          <Card 
             image={HeartEmoji}
             heading="Design"
             description="Figma, Photoshop, Adobe , Sketch, Adobe xd"
           />
         </motion.div>
         <motion.div
-          initial={{ left: "-8rem" }}
+          initial={{ left: "8rem" }}
           whileInView={{ left: "0%" }}
           transition={transition}
-          className="absolute mt-[16rem] ml-[-14rem]"
+          className="absolute mt-[36rem] lg:mt-[16rem] lg:ml-[-14rem] left-0"
         >
           <Card
             image={GlassesEmoji}
@@ -92,7 +92,7 @@ const Services = () => {
           initial={{ left: "8rem" }}
           whileInView={{ left: "0rem" }}
           transition={transition}
-          className="absolute ml-[4rem] mt-[20rem]"
+          className="absolute mt-[54rem] ml-[4rem] lg:mt-[20rem]"
         >
           <Card
             image={HumbleEmoji}
@@ -104,11 +104,11 @@ const Services = () => {
       {/* Blur Section */}
       <div
         className="w-[22rem] h-[14rem] absolute bg-[#edd0ff] rounded-lg blur-2xl 
-        z-[-1] ml-[50%] mt-[-10%]"
+        z-[-1] ml-10 lg:ml-[50%] mt-[-10%]"
       ></div>
       <div
         className="w-[26rem] h-[20rem] absolute bg-[#edd0ff] rounded-lg blur-2xl 
-        z-[-1] ml-[60%] mt-[20rem]"
+        z-[-1] ml-0 lg:ml-[60%] mt-[40rem] lg:mt-[20rem]"
       ></div>
       {/* Blur Section */}
       {/* Right Side */}

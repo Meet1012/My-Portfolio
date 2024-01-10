@@ -37,12 +37,12 @@ const Contacts = () => {
 
   return (
     <div
-      className="flex p-[0,3rem,0,3rem] h-[90vh] mt-[15rem] pt-[3rem] ml-[5rem]"
+      className="lg:mt-15 lg:flex flex-col p-[0,3rem,0,3rem] h-[90vh] mt-[15rem] pt-[3rem] ml-[5rem]"
       id="Contacts"
     >
       {/* Left View */}
       <div>
-        <div className="flex flex-col">
+        <div className="flex flex-col ">
           <span
             className={`${
               darkMode ? "text-gray-300" : "text-gray-700"
@@ -65,7 +65,7 @@ const Contacts = () => {
       </div>
 
       {/* Right View */}
-      <div className="flex justify-center flex-1 relative">
+      <div className="flex justify-center flex-1 relative mt-14 lg:mt-0">
         <form
           ref={form}
           onSubmit={sendEmail}
@@ -100,7 +100,7 @@ const Contacts = () => {
             className={`rounded-full p-[11px] text-[16px] w-[10rem] mt-8
           ${
             darkMode
-              ? "bg-gradient-to-r from-teal-200 to-teal-500 hover:from-white hover:to-teal-200 border-teal-300 border-[3px] shadow-md shadow-teal-300"
+              ? "bg-gradient-to-r from-teal-200 to-teal-500 hover:from-white hover:to-teal-200 border-teal-300 border-[3px] shadow-lg shadow-teal-300"
               : "hover:from-white bg-gradient-to-r from-orange-300 to-orange-500 shadow-lg shadow-orange-300 hover:border-orange-500 hover:border-2"
           }`}
           />
