@@ -3,7 +3,7 @@ import HeartEmoji from "../img/heartemoji.png";
 import GlassesEmoji from "../img/glasses.png";
 import HumbleEmoji from "../img/humble.png";
 import Card from "./Card";
-import Resume from "./Resume.pdf";
+import Resume from "./MeetPatel_Resume.pdf";
 import { motion } from "framer-motion";
 import ThemeContext from "../Context/ThemeContext";
 
@@ -70,7 +70,7 @@ const Services = () => {
           transition={transition}
           className="lg:mt-0 mt-[18rem] absolute ml-[6rem]"
         >
-          <Card 
+          <Card
             image={HeartEmoji}
             heading="Design"
             description="Figma, Photoshop, Adobe , Sketch, Adobe xd"
