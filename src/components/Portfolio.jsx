@@ -5,6 +5,7 @@ import Portfolio_Img from "../img/portfolio.png";
 import Stock_Market from "../img/Stock_Market.png";
 import Shoe_Shop from "../img/Shoe_Store.png";
 import ThemeContext from "../Context/ThemeContext";
+import Hotel from "../img/Hotel.png"
 
 const Portfolio = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -31,7 +32,7 @@ const Portfolio = () => {
       <span className={`${
             darkMode ? "text-teal-300 " : "text-orange-400"
           } font-bold text-5xl mb-2`}>Portfolio</span>
-      <div className="h-[31rem] w-[30rem] lg:w-[45rem] mt-[3rem] items-center  ">
+      <div className="h-[28rem] w-[30rem] lg:w-[45rem] mt-[3rem] items-center  ">
         <Carousel
           swipeable={true}
           autoPlay={true}
@@ -51,6 +52,9 @@ const Portfolio = () => {
           </div>
           <div>
             <img src={Shoe_Shop} alt="" />
+          </div>
+          <div>
+            <img src={Hotel} alt="" />
           </div>
         </Carousel>
       </div>
