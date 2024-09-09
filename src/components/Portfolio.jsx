@@ -41,7 +41,7 @@ const Portfolio = () => {
           showIndicators={false}
           showStatus={false}
           showThumbs={false}
-          showArrows={false}
+          showArrows={true}
           className={` border-[10px] rounded-lg ${darkMode ? "border-gray-800":"border-gray-300"} `}
         >
           <div>
